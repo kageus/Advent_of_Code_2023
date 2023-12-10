@@ -33,8 +33,8 @@ def isSymbolOnAdjacentSeven(yx, x, y):
     return 0
     
 
-dataInput = open("../inputs/input_3.txt").read().split("\n")
-# dataInput = open("../inputs/sample_input_3.txt").read().split("\n")
+dataInput = open("../inputs/input_3").read().split("\n")
+# dataInput = open("../inputs/sample_input_3").read().split("\n")
 yx = []
 
 for line in dataInput:

@@ -140,8 +140,8 @@ def eatRight(yx, y, x, partBuilder):
             return partBuilder
     return partBuilder
 
-dataInput = open("../inputs/input_3.txt").read().split("\n")
-# dataInput = open("../inputs/sample_input_3.txt").read().split("\n")
+dataInput = open("../inputs/input_3").read().split("\n")
+# dataInput = open("../inputs/sample_input_3").read().split("\n")
 yx = []
 
 for line in dataInput:

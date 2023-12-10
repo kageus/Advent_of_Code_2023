@@ -15,8 +15,8 @@ def formatRound(round):
     return formattedDraw
 
 
-dataInput = open("../inputs/input_2.txt").read().split("\n")
-# dataInput = open("../inputs/sample_input_2.txt").read().split("\n")
+dataInput = open("../inputs/input_2").read().split("\n")
+# dataInput = open("../inputs/sample_input_2").read().split("\n")
 gamesList = []
 for line in dataInput:
     gamesList.append(str(line))

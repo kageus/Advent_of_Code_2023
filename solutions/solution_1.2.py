@@ -1,5 +1,5 @@
-dataInput = open("../inputs/input_1.txt").read().split("\n")
-# dataInput = open("../inputs/sample_input_1.2.txt").read().split("\n")
+dataInput = open("../inputs/input_1").read().split("\n")
+# dataInput = open("../inputs/sample_input_1.2").read().split("\n")
 
 codeList = []
 for line in dataInput:
