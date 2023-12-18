@@ -31,6 +31,10 @@ def determinHandType(handBidPair):
         elif char == "2":
             handBucket[12] += 1
 
+    jokerCount = handBucket.pop(3)
+    handBucket[handBucket.index(max(handBucket))] += jokerCount
+    handBucket.insert(3, 0)
+    
     if handBucket.count(5):
         return 6
     elif handBucket.count(4):
@@ -45,20 +49,22 @@ def determinHandType(handBidPair):
         return 1
     else:
         return 0
-        
-TypeMap = {0:"High Card", 1:"Pair", 2:"Two Pair", 3:"Three of a Kind", 4:"Full House",5:"Four of a Kind",6:"Five of a Kind"}
+
+         
+
 handBidPairs = []
 for handBidPair in dataInput:
     handBidPairs.append(handBidPair.split())
 
+# TypeMap = {0:"High Card", 1:"Pair", 2:"Two Pair", 3:"Three of a Kind", 4:"Full House",5:"Four of a Kind",6:"Five of a Kind"}
 handsByKind = [[],[],[],[],[],[],[]]
 for handBidPair in handBidPairs:
     handsByKind[determinHandType(handBidPair[0])].append(handBidPair)
     # print()
-    # print(TypeMap[determinHandType(handBidPair[0])], handBidPair[0])
+    # print(TypeMap[determinHandType(handBidPair[0])],handBidPair[0])
     # input()
 
-custom_order = "23456789TJQKA"              
+custom_order = "J23456789TQKA"              
 scoreList = []
 for kind in handsByKind:
     scoreList += sorted(kind, key=lambda x: [custom_order.index(c) for c in x[0] if c in custom_order])
